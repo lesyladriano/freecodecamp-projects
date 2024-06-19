@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+.left-panel {
+    background-color: #FFC107;
+    color: white;
+    padding: 40px;
+   align-items: center;
+   text-align: center;
+    flex: 1;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.left-panel .avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD54F;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.left-panel h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-panel p {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.left-panel .next-button {
+    background: none;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+.right-panel {
+    background-color: white;
+    padding: 40px;
+    flex: 2;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+ 
+.form-group label {
+    flex: 0 0 80px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gender-options,
+.membership-options {
+    display: flex;
+    align-items: center;
+}
+
+.gender-options label,
+.membership-options label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.gender-options input,
+.membership-options input {
+    margin-right: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-button,
+.save-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: white;
+}
+
+.save-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* General mobile devices */
+@media only screen and (max-width: 767px) {
+    /* Styles for devices with a maximum width of 767px */
+    body {
+        font-size: 12px;
+        margin: 0;
+        display: flex;
+       
+        align-items: flex-start;
+    }
+
+    .container {
+
+        padding: 10px;
+        display: block;
+        margin: 25px;
+        justify-content: flex-start;
+    }
+
+    .left-panel {
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 0;
+
+    }
+
+    .right-panel {
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .gender-options,
+.membership-options {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+}
+
+/* Small mobile devices (portrait) */
+@media only screen and (max-width: 480px) {
+    /* Styles for devices with a maximum width of 480px */
+    body {
+        font-size: 12px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+}
+
